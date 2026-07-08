@@ -34,9 +34,9 @@ Analisado pelo grupo AMARELO: Alex, Guilherme, Letícia, Gustavo
 - Sistema de Contato
 
 ## Entidades
-Fornecedores
-Usuário
-Esportes
-Quadras
-Torneios
-Time
+Fornecedores\
+Usuário\
+Esportes\
+Quadras\
+Torneios\
+Time\

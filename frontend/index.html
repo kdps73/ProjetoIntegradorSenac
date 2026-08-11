@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CinePlanner – Descubra, avalie e comente seus filmes favoritos. Veja os mais bem avaliados, lançamentos e muito mais.">
+    <title>CinePlanner – Início</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <!-- ===== NAVBAR GLOBAL ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo" id="logo-link">
+                <span class="logo-text">CinePlanner</span>
+            </a>
+            <ul class="navbar-links">
+                <li><a href="index.html" class="nav-link active">Início</a></li>
+                <li><a href="#" class="nav-link">Filmes</a></li>
+                <li><a href="#" class="nav-link">Séries</a></li>
+                <li><a href="#" class="nav-link">Favoritos</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <a href="registro.html" class="btn-login" id="btn-entrar">Entrar</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== CABEÇALHO / HERO ===== -->
+    <header class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">CinePlanner</h1>
+            <h2 class="hero-subtitle">Sua experiência cinematográfica começa aqui.</h2>
+            <p class="hero-description">Descubra os melhores filmes, leia resenhas e compartilhe sua opinião com outros cinéfilos.</p>
+            <a href="#filmes" class="hero-btn" id="btn-explorar">Explorar Filmes</a>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span></span>
+        </div>
+    </header>
+
+    <!-- ===== SEÇÃO DE FILMES ===== -->
+    <section class="filmes-section" id="filmes">
+
+        <!-- Navbar de filtros / dropdowns -->
+        <nav class="filtros-navbar" id="filtros-navbar">
+            <div class="filtros-container">
+
+                <!-- Dropdown: Gênero -->
+                <div class="filtro-dropdown" id="filtro-genero">
+                    <button class="filtro-btn" id="btn-genero">
+                        Gênero
+                        <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <ul class="dropdown-menu" id="menu-genero">
+                        <li><a href="#" class="dropdown-item">Ação</a></li>
+                        <li><a href="#" class="dropdown-item">Aventura</a></li>
+                        <li><a href="#" class="dropdown-item">Comédia</a></li>
+                        <li><a href="#" class="dropdown-item">Drama</a></li>
+                        <li><a href="#" class="dropdown-item">Ficção Científica</a></li>
+                        <li><a href="#" class="dropdown-item">Horror</a></li>
+                        <li><a href="#" class="dropdown-item">Romance</a></li>
+                        <li><a href="#" class="dropdown-item">Suspense</a></li>
+                        <li><a href="#" class="dropdown-item">Animação</a></li>
+                    </ul>
+                </div>
+
+                <!-- Dropdown: Mais Popular -->
+                <div class="filtro-dropdown" id="filtro-popular">
+                    <button class="filtro-btn" id="btn-popular">
+                        Mais Popular
+                        <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <ul class="dropdown-menu" id="menu-popular">
+                        <li><a href="#" class="dropdown-item">Esta semana</a></li>
+                        <li><a href="#" class="dropdown-item">Este mês</a></li>
+                        <li><a href="#" class="dropdown-item">Este ano</a></li>
+                        <li><a href="#" class="dropdown-item">Todos os tempos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Dropdown: Lançamentos -->
+                <div class="filtro-dropdown" id="filtro-lancamentos">
+                    <button class="filtro-btn" id="btn-lancamentos">
+                        Lançamentos
+                        <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <ul class="dropdown-menu" id="menu-lancamentos">
+                        <li><a href="#" class="dropdown-item">2026</a></li>
+                        <li><a href="#" class="dropdown-item">2025</a></li>
+                        <li><a href="#" class="dropdown-item">2024</a></li>
+                        <li><a href="#" class="dropdown-item">2023</a></li>
+                    </ul>
+                </div>
+
+                <!-- Dropdown: Em Cartaz -->
+                <div class="filtro-dropdown" id="filtro-cartaz">
+                    <button class="filtro-btn" id="btn-cartaz">
+                        Em Cartaz
+                        <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <ul class="dropdown-menu" id="menu-cartaz">
+                        <li><a href="#" class="dropdown-item">Cinemas perto de mim</a></li>
+                        <li><a href="#" class="dropdown-item">Pré-venda</a></li>
+                        <li><a href="#" class="dropdown-item">Estreias da semana</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- Título da seção -->
+        <div class="section-header">
+            <h2 class="section-title">Melhores Avaliados</h2>
+            <span class="section-subtitle">Ordenados por nota · do maior para o menor</span>
+        </div>
+
+        <!-- Grade de Cards de Filmes (ordenados por nota decrescente) -->
+        <div class="filmes-grid" id="filmes-grid">
+
+            <!-- Card 1 – Nota 9.8 -->
+            <article class="filme-card" id="card-filme-1">
+                <a href="resenha.html" class="card-link">
+                    <div class="card-poster">
+                        <img src="https://placehold.co/300x450/1a1a1a/e50914?text=Filme+1" alt="Poster do Filme 1" class="poster-img">
+                        <div class="card-overlay">
+                            <span class="card-overlay-text">Ver Detalhes</span>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-titulo">O Último Horizonte</h3>
+                        <span class="card-genero">Ficção Científica</span>
+                        <div class="card-nota">
+                            <span class="estrela">★</span>
+                            <span class="nota-valor">9.8</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Card 2 – Nota 9.5 -->
+            <article class="filme-card" id="card-filme-2">
+                <a href="resenha.html" class="card-link">
+                    <div class="card-poster">
+                        <img src="https://placehold.co/300x450/1a1a1a/e50914?text=Filme+2" alt="Poster do Filme 2" class="poster-img">
+                        <div class="card-overlay">
+                            <span class="card-overlay-text">Ver Detalhes</span>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-titulo">Sombras do Passado</h3>
+                        <span class="card-genero">Drama</span>
+                        <div class="card-nota">
+                            <span class="estrela">★</span>
+                            <span class="nota-valor">9.5</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Card 3 – Nota 9.3 -->
+            <article class="filme-card" id="card-filme-3">
+                <a href="resenha.html" class="card-link">
+                    <div class="card-poster">
+                        <img src="https://placehold.co/300x450/1a1a1a/e50914?text=Filme+3" alt="Poster do Filme 3" class="poster-img">
+                        <div class="card-overlay">
+                            <span class="card-overlay-text">Ver Detalhes</span>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-titulo">Era Uma Vez no Caos</h3>
+                        <span class="card-genero">Ação</span>
+                        <div class="card-nota">
+                            <span class="estrela">★</span>
+                            <span class="nota-valor">9.3</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Card 4 – Nota 9.1 -->
+            <article class="filme-card" id="card-filme-4">
+                <a href="resenha.html" class="card-link">
+                    <div class="card-poster">
+                        <img src="https://placehold.co/300x450/1a1a1a/e50914?text=Filme+4" alt="Poster do Filme 4" class="poster-img">
+                        <div class="card-overlay">
+                            <span class="card-overlay-text">Ver Detalhes</span>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-titulo">A Queda dos Deuses</h3>
+                        <span class="card-genero">Suspense</span>
+                        <div class="card-nota">
+                            <span class="estrela">★</span>
+                            <span class="nota-valor">9.1</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Card 5 – Nota 8.9 -->
+            <article class="filme-card" id="card-filme-5">
+                <a href="resenha.html" class="card-link">
+                    <div class="card-poster">
+                        <img src="https://placehold.co/300x450/1a1a1a/e50914?text=Filme+5" alt="Poster do Filme 5" class="poster-img">
+                        <div class="card-overlay">
+                            <span class="card-overlay-text">Ver Detalhes</span>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-titulo">Nebulosa</h3>
+                        <span class="card-genero">Aventura</span>
+                        <div class="card-nota">
+                            <span class="estrela">★</span>
+                            <span class="nota-valor">8.9</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Card 6 – Nota 8.7 -->
+            <article class="filme-card" id="card-filme-6">
+                <a href="resenha.html" class="card-link">
+                    <div class="card-poster">
+                        <img src="https://placehold.co/300x450/1a1a1a/e50914?text=Filme+6" alt="Poster do Filme 6" class="poster-img">
+                        <div class="card-overlay">
+                            <span class="card-overlay-text">Ver Detalhes</span>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-titulo">Amor em Câmera Lenta</h3>
+                        <span class="card-genero">Romance</span>
+                        <div class="card-nota">
+                            <span class="estrela">★</span>
+                            <span class="nota-valor">8.7</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Card 7 – Nota 8.5 -->
+            <article class="filme-card" id="card-filme-7">
+                <a href="resenha.html" class="card-link">
+                    <div class="card-poster">
+                        <img src="https://placehold.co/300x450/1a1a1a/e50914?text=Filme+7" alt="Poster do Filme 7" class="poster-img">
+                        <div class="card-overlay">
+                            <span class="card-overlay-text">Ver Detalhes</span>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-titulo">Risadas no Fim do Mundo</h3>
+                        <span class="card-genero">Comédia</span>
+                        <div class="card-nota">
+                            <span class="estrela">★</span>
+                            <span class="nota-valor">8.5</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Card 8 – Nota 8.2 -->
+            <article class="filme-card" id="card-filme-8">
+                <a href="resenha.html" class="card-link">
+                    <div class="card-poster">
+                        <img src="https://placehold.co/300x450/1a1a1a/e50914?text=Filme+8" alt="Poster do Filme 8" class="poster-img">
+                        <div class="card-overlay">
+                            <span class="card-overlay-text">Ver Detalhes</span>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-titulo">Gritos na Escuridão</h3>
+                        <span class="card-genero">Horror</span>
+                        <div class="card-nota">
+                            <span class="estrela">★</span>
+                            <span class="nota-valor">8.2</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Card 9 – Nota 8.0 -->
+            <article class="filme-card" id="card-filme-9">
+                <a href="resenha.html" class="card-link">
+                    <div class="card-poster">
+                        <img src="https://placehold.co/300x450/1a1a1a/e50914?text=Filme+9" alt="Poster do Filme 9" class="poster-img">
+                        <div class="card-overlay">
+                            <span class="card-overlay-text">Ver Detalhes</span>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-titulo">Mundo Paralelo</h3>
+                        <span class="card-genero">Animação</span>
+                        <div class="card-nota">
+                            <span class="estrela">★</span>
+                            <span class="nota-valor">8.0</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Card 10 – Nota 7.8 -->
+            <article class="filme-card" id="card-filme-10">
+                <a href="resenha.html" class="card-link">
+                    <div class="card-poster">
+                        <img src="https://placehold.co/300x450/1a1a1a/e50914?text=Filme+10" alt="Poster do Filme 10" class="poster-img">
+                        <div class="card-overlay">
+                            <span class="card-overlay-text">Ver Detalhes</span>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-titulo">O Preço da Glória</h3>
+                        <span class="card-genero">Drama</span>
+                        <div class="card-nota">
+                            <span class="estrela">★</span>
+                            <span class="nota-valor">7.8</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Card 11 – Nota 7.6 -->
+            <article class="filme-card" id="card-filme-11">
+                <a href="resenha.html" class="card-link">
+                    <div class="card-poster">
+                        <img src="https://placehold.co/300x450/1a1a1a/e50914?text=Filme+11" alt="Poster do Filme 11" class="poster-img">
+                        <div class="card-overlay">
+                            <span class="card-overlay-text">Ver Detalhes</span>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-titulo">Velocidade Máxima</h3>
+                        <span class="card-genero">Ação</span>
+                        <div class="card-nota">
+                            <span class="estrela">★</span>
+                            <span class="nota-valor">7.6</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Card 12 – Nota 7.4 -->
+            <article class="filme-card" id="card-filme-12">
+                <a href="resenha.html" class="card-link">
+                    <div class="card-poster">
+                        <img src="https://placehold.co/300x450/1a1a1a/e50914?text=Filme+12" alt="Poster do Filme 12" class="poster-img">
+                        <div class="card-overlay">
+                            <span class="card-overlay-text">Ver Detalhes</span>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-titulo">Destinos Cruzados</h3>
+                        <span class="card-genero">Suspense</span>
+                        <div class="card-nota">
+                            <span class="estrela">★</span>
+                            <span class="nota-valor">7.4</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+        </div>
+        <!-- fim filmes-grid -->
+
+    </section>
+    <!-- fim filmes-section -->
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <span class="footer-logo">CinePlanner</span>
+            <p class="footer-copy">&copy; 2026 CinePlanner – Grupo Vermelho · Senac</p>
+        </div>
+    </footer>
+
+</body>
+</html>

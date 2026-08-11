@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Roboto', 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #636363; /* Cor de fundo cinza parecida com a imagem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.register-container {
+    background-color: #000000;
+    padding: 60px 50px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 60px rgba(255, 60, 60, 0.8); /* Brilho maior e mais intenso atrás do card */
+}
+
+.avatar-container {
+    background-color: #a0a0a0;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.avatar-icon {
+    width: 70px;
+    height: 70px;
+    margin-top: 15px;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 34px;
+    font-family: 'Outfit', 'Montserrat', sans-serif;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #929292; /* Fundo cinza dos inputs */
+    border: none;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    outline: none;
+}
+
+input::placeholder {
+    color: #ffffff;
+    text-align: center;
+}
+
+button {
+    width: 60%;
+    margin: 25px auto 0;
+    padding: 12px;
+    background-color: #e50914; /* Botão de confirmação vermelho mais vibrante (estilo Netflix) */
+    color: #ffffff;
+    border: none;
+    border-radius: 25px; /* Bordas arredondadas */
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, filter 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    filter: brightness(1.2);
+}

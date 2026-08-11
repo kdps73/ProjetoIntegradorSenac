@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/registro.css">
+</head>
+<body>
+    <div class="register-container">
+        <div class="avatar-container">
+            <svg class="avatar-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="9" r="4" fill="#ffffff"/>
+                <path d="M4 21C4 17.134 7.13401 14 11 14H13C16.866 14 20 17.134 20 21" fill="#ffffff"/>
+            </svg>
+        </div>
+        <h2>Registro</h2>
+        <form id="registerForm">
+            <input type="text" placeholder="Nome de usuário" required>
+            <input type="email" placeholder="E-mail" required>
+            <input type="password" placeholder="Senha" required>
+            <input type="password" placeholder="Confirmar senha" required>
+            <button type="submit">Confirmar</button>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Evita o recarregamento da página e envio do form
+            // Lógica de registro pode ser adicionada aqui posteriormente
+            console.log('Formulário enviado com sucesso!');
+        });
+    </script>
+</body>
+</html>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,88 +8,191 @@
 }
 
 body {
-    background-color: #636363; /* Cor de fundo cinza parecida com a imagem */
+    background-color: #0a0a0a;
+    background-image: url('../img/bg-movies.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    position: relative;
+}
+
+/* Overlay escuro sobre o fundo para dar contraste */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.92) 100%);
+    z-index: 0;
 }
 
 .register-container {
-    background-color: #000000;
-    padding: 60px 50px;
-    border-radius: 15px;
+    position: relative;
+    z-index: 1;
+    background-color: rgba(15, 15, 15, 0.95);
+    padding: 50px 45px 40px;
+    border-radius: 18px;
     width: 100%;
-    max-width: 480px;
+    max-width: 460px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 0 60px rgba(255, 60, 60, 0.8); /* Brilho maior e mais intenso atrás do card */
+    box-shadow:
+        0 0 80px rgba(229, 9, 20, 0.3),
+        0 25px 60px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(229, 9, 20, 0.15);
 }
 
-.avatar-container {
-    background-color: #a0a0a0;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
+/* Ícone de cinema vermelho */
+.icon-container {
+    width: 70px;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
-    overflow: hidden;
+    margin-bottom: 18px;
 }
 
-.avatar-icon {
-    width: 70px;
-    height: 70px;
-    margin-top: 15px;
+.cinema-icon {
+    width: 60px;
+    height: 60px;
 }
 
 h2 {
     color: #ffffff;
-    font-size: 34px;
+    font-size: 30px;
     font-family: 'Outfit', 'Montserrat', sans-serif;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.subtitle {
+    color: #999999;
+    font-size: 14px;
     margin-bottom: 30px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 form {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 14px;
+}
+
+/* Grupo de input com ícone */
+.input-group {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #1a1a1a;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group:focus-within {
+    border-color: #e50914;
+    box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.15);
+}
+
+.input-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 14px;
+    flex-shrink: 0;
+}
+
+.toggle-password {
+    width: 22px;
+    height: 22px;
+    margin-right: 14px;
+    flex-shrink: 0;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.toggle-password:hover {
+    opacity: 1;
 }
 
 input {
     width: 100%;
-    padding: 12px 15px;
-    background-color: #929292; /* Fundo cinza dos inputs */
+    padding: 14px 12px;
+    background-color: transparent;
     border: none;
     color: #ffffff;
     font-size: 14px;
-    text-align: center;
     outline: none;
+    font-family: 'Inter', sans-serif;
 }
 
 input::placeholder {
-    color: #ffffff;
-    text-align: center;
+    color: #777777;
 }
 
 button {
-    width: 60%;
-    margin: 25px auto 0;
-    padding: 12px;
-    background-color: #e50914; /* Botão de confirmação vermelho mais vibrante (estilo Netflix) */
+    width: 100%;
+    margin-top: 10px;
+    padding: 14px;
+    background-color: #e50914;
     color: #ffffff;
     border: none;
-    border-radius: 25px; /* Bordas arredondadas */
+    border-radius: 10px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease, filter 0.3s ease, transform 0.2s ease;
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 button:hover {
-    filter: brightness(1.2);
+    background-color: #ff1a25;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(229, 9, 20, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.divider {
+    color: #666666;
+    font-size: 13px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.login-link {
+    color: #999999;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #e50914;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.login-link a:hover {
+    color: #ff3b44;
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 520px) {
+    .register-container {
+        margin: 20px;
+        padding: 40px 30px 30px;
+    }
 }

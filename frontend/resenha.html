@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CiNEPLANNER – Resenha, sinopse, elenco e comentários do filme. Avalie e comente com outros cinéfilos.">
+    <title>CiNEPLANNER – Resenha do Filme</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/resenha.css">
+</head>
+<body>
+
+    <!-- ===== NAVBAR GLOBAL ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo" id="logo-link">
+                <span class="logo-text">CiNEPLANNER</span>
+            </a>
+            <ul class="navbar-links">
+                <li><a href="index.html" class="nav-link">Início</a></li>
+                <li><a href="#" class="nav-link active">Filmes</a></li>
+                <li><a href="#" class="nav-link">Listas</a></li>
+                <li><a href="#" class="nav-link">Quiz</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <a href="registro.html" class="btn-login" id="btn-entrar">Entrar</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== CABEÇALHO DO FILME ===== -->
+    <section class="filme-hero" id="filme-hero">
+        <div class="filme-hero-inner">
+
+            <!-- Poster + Estrelas -->
+            <div class="poster-col">
+                <div class="poster-wrap">
+                    <img
+                        src="https://placehold.co/420x630/1a1a1a/e50914?text=Poster+do+Filme"
+                        alt="Poster do Filme"
+                        class="poster-img"
+                        id="poster-principal"
+                    >
+                </div>
+                <!-- Avaliação com estrelas abaixo do poster -->
+                <div class="poster-rating" id="poster-rating">
+                    <div class="stars-row">
+                        <!-- Checkbox hack: 5 estrelas clicáveis -->
+                        <input type="radio" name="avaliacao" id="star5" value="5" class="star-input">
+                        <label for="star5" class="star-label" title="5 estrelas">★</label>
+                        <input type="radio" name="avaliacao" id="star4" value="4" class="star-input">
+                        <label for="star4" class="star-label" title="4 estrelas">★</label>
+                        <input type="radio" name="avaliacao" id="star3" value="3" class="star-input">
+                        <label for="star3" class="star-label" title="3 estrelas">★</label>
+                        <input type="radio" name="avaliacao" id="star2" value="2" class="star-input">
+                        <label for="star2" class="star-label" title="2 estrelas">★</label>
+                        <input type="radio" name="avaliacao" id="star1" value="1" class="star-input">
+                        <label for="star1" class="star-label" title="1 estrela">★</label>
+                    </div>
+                    <div class="media-nota">
+                        <span class="estrela-media">★</span>
+                        <span class="nota-numero">9.1</span>
+                        <span class="nota-total">/ 10</span>
+                        <span class="nota-votos">(4.283 votos)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Informações do filme -->
+            <div class="info-col" id="info-col">
+                <span class="filme-badge">Ficção Científica</span>
+                <h1 class="filme-titulo">O Último Horizonte</h1>
+                <div class="filme-meta">
+                    <span class="meta-item">2026</span>
+                    <span class="meta-sep">·</span>
+                    <span class="meta-item">2h 18min</span>
+                    <span class="meta-sep">·</span>
+                    <span class="meta-item">14+</span>
+                </div>
+                <p class="filme-sinopse">
+                    Em um futuro onde a humanidade atingiu os limites do cosmos conhecido, uma tripulação de cientistas
+                    embarca em uma missão suicida para atravessar um horizonte de eventos desconhecido. O que eles
+                    encontram do outro lado desafia toda a lógica da física e da percepção humana — e coloca em xeque
+                    a própria definição de existência. Uma odisseia épica sobre coragem, sacrifício e o peso
+                    das escolhas irreversíveis.
+                </p>
+                <div class="elenco-bloco">
+                    <h3 class="elenco-titulo">Elenco Principal</h3>
+                    <ul class="elenco-lista">
+                        <li class="elenco-item">
+                            <img src="https://placehold.co/56x56/2a2a2a/e50914?text=A" alt="Ator 1" class="elenco-foto">
+                            <div class="elenco-nomes">
+                                <span class="elenco-ator">Marcos Ferreira</span>
+                                <span class="elenco-personagem">Dr. Elias Vaz</span>
+                            </div>
+                        </li>
+                        <li class="elenco-item">
+                            <img src="https://placehold.co/56x56/2a2a2a/e50914?text=B" alt="Ator 2" class="elenco-foto">
+                            <div class="elenco-nomes">
+                                <span class="elenco-ator">Sofia Andrade</span>
+                                <span class="elenco-personagem">Cmt. Lena Cruz</span>
+                            </div>
+                        </li>
+                        <li class="elenco-item">
+                            <img src="https://placehold.co/56x56/2a2a2a/e50914?text=C" alt="Ator 3" class="elenco-foto">
+                            <div class="elenco-nomes">
+                                <span class="elenco-ator">Rafael Duarte</span>
+                                <span class="elenco-personagem">Eng. Tomás Reys</span>
+                            </div>
+                        </li>
+                        <li class="elenco-item">
+                            <img src="https://placehold.co/56x56/2a2a2a/e50914?text=D" alt="Ator 4" class="elenco-foto">
+                            <div class="elenco-nomes">
+                                <span class="elenco-ator">Isabela Nunes</span>
+                                <span class="elenco-personagem">IA ARIA</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fade inferior do hero -->
+        <div class="hero-fade-bottom"></div>
+    </section>
+
+    <!-- ===== SEÇÃO DE COMENTÁRIOS ===== -->
+    <section class="comentarios-section" id="comentarios">
+
+        <!-- Fade superior conectando com o hero -->
+        <div class="comentarios-fade-top"></div>
+
+        <div class="comentarios-inner">
+            <h2 class="comentarios-titulo">Comentários <span class="comentarios-count">(47)</span></h2>
+
+            <!-- ─────────────────────────────────────────────── -->
+            <!-- COMENTÁRIO 1 – 312 curtidas (maior)            -->
+            <!-- ─────────────────────────────────────────────── -->
+            <div class="comentario-wrapper" id="coment-wrapper-1">
+                <!-- Checkbox que controla a expansão das respostas -->
+                <input type="checkbox" id="toggle-coment-1" class="toggle-coment" aria-label="Expandir respostas">
+
+                <!-- Card do comentário (modo resumido) -->
+                <div class="comentario-card" id="coment-card-1">
+
+                    <!-- Cabeçalho: perfil + curtidas -->
+                    <div class="coment-header">
+                        <div class="coment-user">
+                            <img src="https://placehold.co/44x44/2a2a2a/e50914?text=U1" alt="Foto de perfil" class="user-avatar">
+                            <div class="user-info">
+                                <span class="user-nome">Lucas Mendes</span>
+                                <span class="user-data">12 ago 2026</span>
+                            </div>
+                        </div>
+                        <div class="coment-curtidas">
+                            <input type="checkbox" id="curtir-1" class="curtir-input" aria-label="Curtir comentário">
+                            <label for="curtir-1" class="curtir-btn" id="curtir-btn-1">
+                                <span class="icone-coracao">♡</span>
+                                <span class="icone-coracao-cheio">♥</span>
+                                <span class="curtidas-count">312</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Texto do comentário -->
+                    <p class="coment-texto">
+                        Simplesmente o melhor filme que assisti nos últimos anos. A direção de fotografia é impecável,
+                        e a trilha sonora te coloca dentro da nave. O final me deixou sem palavras por uns bons minutos.
+                        Definitivamente um dos grandes da ficção científica.
+                    </p>
+
+                    <!-- Prévia das respostas (visível quando recolhido) -->
+                    <div class="respostas-preview">
+                        <label for="toggle-coment-1" class="ver-respostas-btn">
+                            <span class="preview-avatares">
+                                <img src="https://placehold.co/24x24/2a2a2a/e50914?text=R1" alt="" class="preview-avatar">
+                                <img src="https://placehold.co/24x24/2a2a2a/e50914?text=R2" alt="" class="preview-avatar">
+                                <img src="https://placehold.co/24x24/2a2a2a/e50914?text=R3" alt="" class="preview-avatar">
+                            </span>
+                            <span class="preview-texto">3 respostas · Clique para expandir</span>
+                            <span class="expand-arrow">▾</span>
+                        </label>
+                    </div>
+
+                    <!-- ──── SEÇÃO DE RESPOSTAS (expandida) ──── -->
+                    <div class="respostas-expandidas" id="respostas-1">
+
+                        <!-- Botão voltar (canto superior direito da seção expandida) -->
+                        <label for="toggle-coment-1" class="btn-voltar-respostas" title="Fechar respostas">✕ Fechar</label>
+
+                        <!-- Resposta 1 -->
+                        <div class="resposta-item" id="resposta-1-1">
+                            <div class="resposta-header">
+                                <div class="coment-user">
+                                    <img src="https://placehold.co/36x36/2a2a2a/e50914?text=R1" alt="Foto" class="user-avatar user-avatar--sm">
+                                    <span class="user-nome user-nome--sm">Ana Paula</span>
+                                </div>
+                                <div class="coment-curtidas">
+                                    <input type="checkbox" id="curtir-r1-1" class="curtir-input" aria-label="Curtir resposta">
+                                    <label for="curtir-r1-1" class="curtir-btn curtir-btn--sm">
+                                        <span class="icone-coracao">♡</span>
+                                        <span class="icone-coracao-cheio">♥</span>
+                                        <span class="curtidas-count">48</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <p class="coment-texto coment-texto--sm">Concordo 100%! O terceiro ato então… me arrepiei todo!</p>
+                        </div>
+
+                        <!-- Resposta 2 -->
+                        <div class="resposta-item" id="resposta-1-2">
+                            <div class="resposta-header">
+                                <div class="coment-user">
+                                    <img src="https://placehold.co/36x36/2a2a2a/e50914?text=R2" alt="Foto" class="user-avatar user-avatar--sm">
+                                    <span class="user-nome user-nome--sm">Pedro Costa</span>
+                                </div>
+                                <div class="coment-curtidas">
+                                    <input type="checkbox" id="curtir-r1-2" class="curtir-input" aria-label="Curtir resposta">
+                                    <label for="curtir-r1-2" class="curtir-btn curtir-btn--sm">
+                                        <span class="icone-coracao">♡</span>
+                                        <span class="icone-coracao-cheio">♥</span>
+                                        <span class="curtidas-count">21</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <p class="coment-texto coment-texto--sm">A trilha sonora do Hans Schuler é absurda. Fica na cabeça por dias.</p>
+                        </div>
+
+                        <!-- Resposta 3 -->
+                        <div class="resposta-item" id="resposta-1-3">
+                            <div class="resposta-header">
+                                <div class="coment-user">
+                                    <img src="https://placehold.co/36x36/2a2a2a/e50914?text=R3" alt="Foto" class="user-avatar user-avatar--sm">
+                                    <span class="user-nome user-nome--sm">Carla Souza</span>
+                                </div>
+                                <div class="coment-curtidas">
+                                    <input type="checkbox" id="curtir-r1-3" class="curtir-input" aria-label="Curtir resposta">
+                                    <label for="curtir-r1-3" class="curtir-btn curtir-btn--sm">
+                                        <span class="icone-coracao">♡</span>
+                                        <span class="icone-coracao-cheio">♥</span>
+                                        <span class="curtidas-count">9</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <p class="coment-texto coment-texto--sm">Assisti duas vezes e na segunda vez percebi detalhes que não tinha visto antes. Genial!</p>
+                        </div>
+
+                        <!-- Botão flutuante: escrever nova resposta -->
+                        <input type="checkbox" id="toggle-nova-resposta-1" class="toggle-nova-resposta" aria-label="Abrir campo de resposta">
+                        <label for="toggle-nova-resposta-1" class="btn-nova-resposta" id="btn-nova-resp-1" title="Escrever uma resposta">✏ Responder</label>
+                        <div class="nova-resposta-form" id="nova-resp-form-1">
+                            <div class="nova-resp-inner">
+                                <img src="https://placehold.co/36x36/2a2a2a/e50914?text=Eu" alt="Você" class="user-avatar user-avatar--sm">
+                                <textarea class="nova-resp-textarea" placeholder="Escreva sua resposta…" rows="2" id="textarea-resp-1"></textarea>
+                                <div class="nova-resp-actions">
+                                    <label for="toggle-nova-resposta-1" class="btn-cancelar-resp">Cancelar</label>
+                                    <button type="button" class="btn-enviar-resp" id="btn-enviar-resp-1">Enviar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- fim respostas-expandidas -->
+                </div>
+            </div>
+            <!-- fim comentário 1 -->
+
+            <!-- ─────────────────────────────────────────────── -->
+            <!-- COMENTÁRIO 2 – 187 curtidas                    -->
+            <!-- ─────────────────────────────────────────────── -->
+            <div class="comentario-wrapper" id="coment-wrapper-2">
+                <input type="checkbox" id="toggle-coment-2" class="toggle-coment" aria-label="Expandir respostas">
+                <div class="comentario-card" id="coment-card-2">
+                    <div class="coment-header">
+                        <div class="coment-user">
+                            <img src="https://placehold.co/44x44/2a2a2a/e50914?text=U2" alt="Foto de perfil" class="user-avatar">
+                            <div class="user-info">
+                                <span class="user-nome">Fernanda Lima</span>
+                                <span class="user-data">11 ago 2026</span>
+                            </div>
+                        </div>
+                        <div class="coment-curtidas">
+                            <input type="checkbox" id="curtir-2" class="curtir-input" aria-label="Curtir comentário">
+                            <label for="curtir-2" class="curtir-btn">
+                                <span class="icone-coracao">♡</span>
+                                <span class="icone-coracao-cheio">♥</span>
+                                <span class="curtidas-count">187</span>
+                            </label>
+                        </div>
+                    </div>
+                    <p class="coment-texto">
+                        A atuação do Marcos Ferreira como Dr. Vaz é de longe a melhor da carreira dele.
+                        Tem uma cena específica perto do final que me fez chorar feio. Cinema de verdade.
+                    </p>
+                    <div class="respostas-preview">
+                        <label for="toggle-coment-2" class="ver-respostas-btn">
+                            <span class="preview-avatares">
+                                <img src="https://placehold.co/24x24/2a2a2a/e50914?text=R1" alt="" class="preview-avatar">
+                                <img src="https://placehold.co/24x24/2a2a2a/e50914?text=R2" alt="" class="preview-avatar">
+                            </span>
+                            <span class="preview-texto">2 respostas · Clique para expandir</span>
+                            <span class="expand-arrow">▾</span>
+                        </label>
+                    </div>
+                    <div class="respostas-expandidas" id="respostas-2">
+                        <label for="toggle-coment-2" class="btn-voltar-respostas" title="Fechar respostas">✕ Fechar</label>
+                        <div class="resposta-item">
+                            <div class="resposta-header">
+                                <div class="coment-user">
+                                    <img src="https://placehold.co/36x36/2a2a2a/e50914?text=R1" alt="Foto" class="user-avatar user-avatar--sm">
+                                    <span class="user-nome user-nome--sm">Guilherme N.</span>
+                                </div>
+                                <div class="coment-curtidas">
+                                    <input type="checkbox" id="curtir-r2-1" class="curtir-input" aria-label="Curtir resposta">
+                                    <label for="curtir-r2-1" class="curtir-btn curtir-btn--sm">
+                                        <span class="icone-coracao">♡</span>
+                                        <span class="icone-coracao-cheio">♥</span>
+                                        <span class="curtidas-count">33</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <p class="coment-texto coment-texto--sm">Sim!! Aquela cena no módulo de hibernação… o silêncio que ela deixa é devastador.</p>
+                        </div>
+                        <div class="resposta-item">
+                            <div class="resposta-header">
+                                <div class="coment-user">
+                                    <img src="https://placehold.co/36x36/2a2a2a/e50914?text=R2" alt="Foto" class="user-avatar user-avatar--sm">
+                                    <span class="user-nome user-nome--sm">Mariana V.</span>
+                                </div>
+                                <div class="coment-curtidas">
+                                    <input type="checkbox" id="curtir-r2-2" class="curtir-input" aria-label="Curtir resposta">
+                                    <label for="curtir-r2-2" class="curtir-btn curtir-btn--sm">
+                                        <span class="icone-coracao">♡</span>
+                                        <span class="icone-coracao-cheio">♥</span>
+                                        <span class="curtidas-count">17</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <p class="coment-texto coment-texto--sm">Sofia Andrade também arrasa demais como comandante. Que elenco!</p>
+                        </div>
+                        <input type="checkbox" id="toggle-nova-resposta-2" class="toggle-nova-resposta" aria-label="Abrir campo de resposta">
+                        <label for="toggle-nova-resposta-2" class="btn-nova-resposta" title="Escrever uma resposta">✏ Responder</label>
+                        <div class="nova-resposta-form">
+                            <div class="nova-resp-inner">
+                                <img src="https://placehold.co/36x36/2a2a2a/e50914?text=Eu" alt="Você" class="user-avatar user-avatar--sm">
+                                <textarea class="nova-resp-textarea" placeholder="Escreva sua resposta…" rows="2"></textarea>
+                                <div class="nova-resp-actions">
+                                    <label for="toggle-nova-resposta-2" class="btn-cancelar-resp">Cancelar</label>
+                                    <button type="button" class="btn-enviar-resp">Enviar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ─────────────────────────────────────────────── -->
+            <!-- COMENTÁRIO 3 – 94 curtidas                     -->
+            <!-- ─────────────────────────────────────────────── -->
+            <div class="comentario-wrapper" id="coment-wrapper-3">
+                <input type="checkbox" id="toggle-coment-3" class="toggle-coment" aria-label="Expandir respostas">
+                <div class="comentario-card" id="coment-card-3">
+                    <div class="coment-header">
+                        <div class="coment-user">
+                            <img src="https://placehold.co/44x44/2a2a2a/e50914?text=U3" alt="Foto de perfil" class="user-avatar">
+                            <div class="user-info">
+                                <span class="user-nome">Roberto Alves</span>
+                                <span class="user-data">10 ago 2026</span>
+                            </div>
+                        </div>
+                        <div class="coment-curtidas">
+                            <input type="checkbox" id="curtir-3" class="curtir-input" aria-label="Curtir comentário">
+                            <label for="curtir-3" class="curtir-btn">
+                                <span class="icone-coracao">♡</span>
+                                <span class="icone-coracao-cheio">♥</span>
+                                <span class="curtidas-count">94</span>
+                            </label>
+                        </div>
+                    </div>
+                    <p class="coment-texto">
+                        Os efeitos visuais são de tirar o fôlego, mas o que me surpreendeu foi a profundidade do roteiro.
+                        Cada personagem tem um arco bem construído. Raramente vejo isso num blockbuster de FC.
+                    </p>
+                    <div class="respostas-preview">
+                        <label for="toggle-coment-3" class="ver-respostas-btn">
+                            <span class="preview-avatares">
+                                <img src="https://placehold.co/24x24/2a2a2a/e50914?text=R1" alt="" class="preview-avatar">
+                            </span>
+                            <span class="preview-texto">1 resposta · Clique para expandir</span>
+                            <span class="expand-arrow">▾</span>
+                        </label>
+                    </div>
+                    <div class="respostas-expandidas" id="respostas-3">
+                        <label for="toggle-coment-3" class="btn-voltar-respostas" title="Fechar respostas">✕ Fechar</label>
+                        <div class="resposta-item">
+                            <div class="resposta-header">
+                                <div class="coment-user">
+                                    <img src="https://placehold.co/36x36/2a2a2a/e50914?text=R1" alt="Foto" class="user-avatar user-avatar--sm">
+                                    <span class="user-nome user-nome--sm">Tiago M.</span>
+                                </div>
+                                <div class="coment-curtidas">
+                                    <input type="checkbox" id="curtir-r3-1" class="curtir-input" aria-label="Curtir resposta">
+                                    <label for="curtir-r3-1" class="curtir-btn curtir-btn--sm">
+                                        <span class="icone-coracao">♡</span>
+                                        <span class="icone-coracao-cheio">♥</span>
+                                        <span class="curtidas-count">12</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <p class="coment-texto coment-texto--sm">Exatamente. Dá para usar em aula de roteiro como exemplo de estrutura.</p>
+                        </div>
+                        <input type="checkbox" id="toggle-nova-resposta-3" class="toggle-nova-resposta" aria-label="Abrir campo de resposta">
+                        <label for="toggle-nova-resposta-3" class="btn-nova-resposta" title="Escrever uma resposta">✏ Responder</label>
+                        <div class="nova-resposta-form">
+                            <div class="nova-resp-inner">
+                                <img src="https://placehold.co/36x36/2a2a2a/e50914?text=Eu" alt="Você" class="user-avatar user-avatar--sm">
+                                <textarea class="nova-resp-textarea" placeholder="Escreva sua resposta…" rows="2"></textarea>
+                                <div class="nova-resp-actions">
+                                    <label for="toggle-nova-resposta-3" class="btn-cancelar-resp">Cancelar</label>
+                                    <button type="button" class="btn-enviar-resp">Enviar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ─────────────────────────────────────────────── -->
+            <!-- ÁREA PARA NOVO COMENTÁRIO                      -->
+            <!-- ─────────────────────────────────────────────── -->
+            <div class="novo-comentario" id="novo-comentario">
+                <h3 class="novo-coment-titulo">Deixe seu comentário</h3>
+                <div class="novo-coment-form">
+                    <img src="https://placehold.co/48x48/2a2a2a/e50914?text=Eu" alt="Você" class="user-avatar">
+                    <div class="novo-coment-campo">
+                        <textarea
+                            class="novo-coment-textarea"
+                            id="novo-coment-textarea"
+                            placeholder="O que você achou do filme? Compartilhe sua opinião…"
+                            rows="4"
+                        ></textarea>
+                        <div class="novo-coment-actions">
+                            <span class="coment-dica">Seja respeitoso com outros cinéfilos.</span>
+                            <button type="button" class="btn-publicar" id="btn-publicar">Publicar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- fim comentarios-inner -->
+
+    </section>
+    <!-- fim comentarios-section -->
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <span class="footer-logo">CiNEPLANNER</span>
+            <p class="footer-copy">&copy; 2026 CiNEPLANNER – Grupo Vermelho · Senac</p>
+        </div>
+    </footer>
+
+</body>
+</html>

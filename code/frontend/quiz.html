@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quiz de filmes do CinePlanner - Teste seus conhecimentos sobre cinema e ganhe XP!">
+    <title>CinePlanner - Quiz</title>
+    <link rel="stylesheet" href="css/quiz.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ======================== NAVBAR ======================== -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <span class="logo-cine">Cine</span><span class="logo-planner">Planner</span>
+            </a>
+            <ul class="navbar-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html#generos">Gêneros</a></li>
+                <li><a href="index.html#populares">Populares</a></li>
+                <li><a href="index.html#lancamentos">Lançamentos</a></li>
+                <li><a href="quiz.html" class="active">Quiz</a></li>
+            </ul>
+            <!-- Menu hamburguer para mobile (CSS only) -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle-input">
+            <label for="menu-toggle" class="menu-toggle-label">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </label>
+        </div>
+    </nav>
+
+    <!-- ======================== HERO / CABEÇALHO DO QUIZ ======================== -->
+    <header class="quiz-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="quiz-title">Quiz</h1>
+            <p class="quiz-subtitle">Teste seus conhecimentos sobre o mundo do cinema e ganhe XP!</p>
+            <div class="xp-badge">
+                <span class="xp-icon">⭐</span>
+                <span class="xp-text">Ganhe até <strong>150 XP</strong> por dia</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ======================== SELEÇÃO DE GÊNERO ======================== -->
+    <section class="genre-selection" id="generos-quiz">
+        <div class="section-container">
+            <h2 class="section-title">Escolha o Gênero</h2>
+            <p class="section-description">Selecione um gênero de filme para começar o quiz</p>
+
+            <div class="genre-grid">
+                <!-- Gênero: Ação -->
+                <a href="#quiz-acao" class="genre-card">
+                    <div class="genre-card-image">
+                        <div class="genre-placeholder genre-acao">
+                            <span class="genre-emoji">💥</span>
+                        </div>
+                    </div>
+                    <div class="genre-card-info">
+                        <h3>Ação</h3>
+                        <span class="genre-questions">15 perguntas</span>
+                    </div>
+                </a>
+
+                <!-- Gênero: Terror -->
+                <a href="#quiz-terror" class="genre-card">
+                    <div class="genre-card-image">
+                        <div class="genre-placeholder genre-terror">
+                            <span class="genre-emoji">👻</span>
+                        </div>
+                    </div>
+                    <div class="genre-card-info">
+                        <h3>Terror</h3>
+                        <span class="genre-questions">15 perguntas</span>
+                    </div>
+                </a>
+
+                <!-- Gênero: Comédia -->
+                <a href="#quiz-comedia" class="genre-card">
+                    <div class="genre-card-image">
+                        <div class="genre-placeholder genre-comedia">
+                            <span class="genre-emoji">😂</span>
+                        </div>
+                    </div>
+                    <div class="genre-card-info">
+                        <h3>Comédia</h3>
+                        <span class="genre-questions">15 perguntas</span>
+                    </div>
+                </a>
+
+                <!-- Gênero: Ficção Científica -->
+                <a href="#quiz-ficcao" class="genre-card">
+                    <div class="genre-card-image">
+                        <div class="genre-placeholder genre-ficcao">
+                            <span class="genre-emoji">🚀</span>
+                        </div>
+                    </div>
+                    <div class="genre-card-info">
+                        <h3>Ficção Científica</h3>
+                        <span class="genre-questions">15 perguntas</span>
+                    </div>
+                </a>
+
+                <!-- Gênero: Romance -->
+                <a href="#quiz-romance" class="genre-card">
+                    <div class="genre-card-image">
+                        <div class="genre-placeholder genre-romance">
+                            <span class="genre-emoji">❤️</span>
+                        </div>
+                    </div>
+                    <div class="genre-card-info">
+                        <h3>Romance</h3>
+                        <span class="genre-questions">15 perguntas</span>
+                    </div>
+                </a>
+
+                <!-- Gênero: Aventura -->
+                <a href="#quiz-aventura" class="genre-card">
+                    <div class="genre-card-image">
+                        <div class="genre-placeholder genre-aventura">
+                            <span class="genre-emoji">🗺️</span>
+                        </div>
+                    </div>
+                    <div class="genre-card-info">
+                        <h3>Aventura</h3>
+                        <span class="genre-questions">15 perguntas</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== QUIZ - GÊNERO AÇÃO ======================== -->
+    <section class="quiz-section" id="quiz-acao">
+        <div class="section-container">
+            <div class="quiz-header">
+                <h2 class="quiz-genre-title">🎬 Quiz de Ação</h2>
+                <div class="quiz-xp-counter">
+                    <span class="xp-icon-small">⭐</span>
+                    <span>+10 XP por acerto</span>
+                </div>
+            </div>
+
+            <!-- Container do carrossel de perguntas com scroll horizontal suave -->
+            <div class="quiz-carousel">
+                <div class="quiz-track">
+
+                    <!-- ===== PERGUNTA 1 ===== -->
+                    <div class="quiz-card" id="q1">
+                        <div class="card-progress">Pergunta 1 de 15</div>
+                        <div class="card-image">
+                            <div class="image-placeholder placeholder-spiderman">
+                                <span class="placeholder-text">🕷️ Homem-Aranha</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-question">Quem interpreta o Homem-Aranha na trilogia mais recente da Marvel?</h3>
+                            <div class="card-alternatives">
+                                <label class="alternative">
+                                    <input type="radio" name="q1" value="a">
+                                    <span class="alt-marker">A</span>
+                                    <span class="alt-text">Andrew Garfield</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q1" value="b">
+                                    <span class="alt-marker">B</span>
+                                    <span class="alt-text">Tobey Maguire</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q1" value="c">
+                                    <span class="alt-marker">C</span>
+                                    <span class="alt-text">Tom Holland</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q1" value="d">
+                                    <span class="alt-marker">D</span>
+                                    <span class="alt-text">Jake Gyllenhaal</span>
+                                </label>
+                            </div>
+                        </div>
+                        <a href="#q2" class="btn-next">Próxima →</a>
+                    </div>
+
+                    <!-- ===== PERGUNTA 2 ===== -->
+                    <div class="quiz-card" id="q2">
+                        <div class="card-progress">Pergunta 2 de 15</div>
+                        <div class="card-image">
+                            <div class="image-placeholder placeholder-avengers">
+                                <span class="placeholder-text">🦸 Vingadores</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-question">Qual é o nome real do Homem de Ferro?</h3>
+                            <div class="card-alternatives">
+                                <label class="alternative">
+                                    <input type="radio" name="q2" value="a">
+                                    <span class="alt-marker">A</span>
+                                    <span class="alt-text">Bruce Wayne</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q2" value="b">
+                                    <span class="alt-marker">B</span>
+                                    <span class="alt-text">Tony Stark</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q2" value="c">
+                                    <span class="alt-marker">C</span>
+                                    <span class="alt-text">Steve Rogers</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q2" value="d">
+                                    <span class="alt-marker">D</span>
+                                    <span class="alt-text">Peter Parker</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card-nav">
+                            <a href="#q1" class="btn-prev">← Anterior</a>
+                            <a href="#q3" class="btn-next">Próxima →</a>
+                        </div>
+                    </div>
+
+                    <!-- ===== PERGUNTA 3 ===== -->
+                    <div class="quiz-card" id="q3">
+                        <div class="card-progress">Pergunta 3 de 15</div>
+                        <div class="card-image">
+                            <div class="image-placeholder placeholder-batman">
+                                <span class="placeholder-text">🦇 Batman</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-question">Quem dirigiu "O Cavaleiro das Trevas" (2008)?</h3>
+                            <div class="card-alternatives">
+                                <label class="alternative">
+                                    <input type="radio" name="q3" value="a">
+                                    <span class="alt-marker">A</span>
+                                    <span class="alt-text">Zack Snyder</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q3" value="b">
+                                    <span class="alt-marker">B</span>
+                                    <span class="alt-text">Christopher Nolan</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q3" value="c">
+                                    <span class="alt-marker">C</span>
+                                    <span class="alt-text">Tim Burton</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q3" value="d">
+                                    <span class="alt-marker">D</span>
+                                    <span class="alt-text">Matt Reeves</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card-nav">
+                            <a href="#q2" class="btn-prev">← Anterior</a>
+                            <a href="#q4" class="btn-next">Próxima →</a>
+                        </div>
+                    </div>
+
+                    <!-- ===== PERGUNTA 4 ===== -->
+                    <div class="quiz-card" id="q4">
+                        <div class="card-progress">Pergunta 4 de 15</div>
+                        <div class="card-image">
+                            <div class="image-placeholder placeholder-matrix">
+                                <span class="placeholder-text">💊 Matrix</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-question">Qual a cor da pílula que Neo escolhe em Matrix?</h3>
+                            <div class="card-alternatives">
+                                <label class="alternative">
+                                    <input type="radio" name="q4" value="a">
+                                    <span class="alt-marker">A</span>
+                                    <span class="alt-text">Azul</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q4" value="b">
+                                    <span class="alt-marker">B</span>
+                                    <span class="alt-text">Verde</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q4" value="c">
+                                    <span class="alt-marker">C</span>
+                                    <span class="alt-text">Vermelha</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q4" value="d">
+                                    <span class="alt-marker">D</span>
+                                    <span class="alt-text">Amarela</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card-nav">
+                            <a href="#q3" class="btn-prev">← Anterior</a>
+                            <a href="#q5" class="btn-next">Próxima →</a>
+                        </div>
+                    </div>
+
+                    <!-- ===== PERGUNTA 5 ===== -->
+                    <div class="quiz-card" id="q5">
+                        <div class="card-progress">Pergunta 5 de 15</div>
+                        <div class="card-image">
+                            <div class="image-placeholder placeholder-fastfurious">
+                                <span class="placeholder-text">🏎️ Velozes e Furiosos</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-question">Qual ator interpreta Dominic Toretto em "Velozes e Furiosos"?</h3>
+                            <div class="card-alternatives">
+                                <label class="alternative">
+                                    <input type="radio" name="q5" value="a">
+                                    <span class="alt-marker">A</span>
+                                    <span class="alt-text">Dwayne Johnson</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q5" value="b">
+                                    <span class="alt-marker">B</span>
+                                    <span class="alt-text">Vin Diesel</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q5" value="c">
+                                    <span class="alt-marker">C</span>
+                                    <span class="alt-text">Jason Statham</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q5" value="d">
+                                    <span class="alt-marker">D</span>
+                                    <span class="alt-text">Paul Walker</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card-nav">
+                            <a href="#q4" class="btn-prev">← Anterior</a>
+                            <a href="#q6" class="btn-next">Próxima →</a>
+                        </div>
+                    </div>
+
+                    <!-- ===== PERGUNTA 6 ===== -->
+                    <div class="quiz-card" id="q6">
+                        <div class="card-progress">Pergunta 6 de 15</div>
+                        <div class="card-image">
+                            <div class="image-placeholder placeholder-john-wick">
+                                <span class="placeholder-text">🔫 John Wick</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-question">Qual ator interpreta John Wick?</h3>
+                            <div class="card-alternatives">
+                                <label class="alternative">
+                                    <input type="radio" name="q6" value="a">
+                                    <span class="alt-marker">A</span>
+                                    <span class="alt-text">Keanu Reeves</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q6" value="b">
+                                    <span class="alt-marker">B</span>
+                                    <span class="alt-text">Liam Neeson</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q6" value="c">
+                                    <span class="alt-marker">C</span>
+                                    <span class="alt-text">Matt Damon</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q6" value="d">
+                                    <span class="alt-marker">D</span>
+                                    <span class="alt-text">Tom Cruise</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card-nav">
+                            <a href="#q5" class="btn-prev">← Anterior</a>
+                            <a href="#q7" class="btn-next">Próxima →</a>
+                        </div>
+                    </div>
+
+                    <!-- ===== PERGUNTA 7 ===== -->
+                    <div class="quiz-card" id="q7">
+                        <div class="card-progress">Pergunta 7 de 15</div>
+                        <div class="card-image">
+                            <div class="image-placeholder placeholder-gladiator">
+                                <span class="placeholder-text">⚔️ Gladiador</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-question">Em que época se passa o filme "Gladiador"?</h3>
+                            <div class="card-alternatives">
+                                <label class="alternative">
+                                    <input type="radio" name="q7" value="a">
+                                    <span class="alt-marker">A</span>
+                                    <span class="alt-text">Grécia Antiga</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q7" value="b">
+                                    <span class="alt-marker">B</span>
+                                    <span class="alt-text">Império Romano</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q7" value="c">
+                                    <span class="alt-marker">C</span>
+                                    <span class="alt-text">Idade Média</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q7" value="d">
+                                    <span class="alt-marker">D</span>
+                                    <span class="alt-text">Egito Antigo</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card-nav">
+                            <a href="#q6" class="btn-prev">← Anterior</a>
+                            <a href="#q8" class="btn-next">Próxima →</a>
+                        </div>
+                    </div>
+
+                    <!-- ===== PERGUNTA 8 ===== -->
+                    <div class="quiz-card" id="q8">
+                        <div class="card-progress">Pergunta 8 de 15</div>
+                        <div class="card-image">
+                            <div class="image-placeholder placeholder-mission">
+                                <span class="placeholder-text">🕵️ Missão Impossível</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-question">Qual é o nome do personagem de Tom Cruise em "Missão Impossível"?</h3>
+                            <div class="card-alternatives">
+                                <label class="alternative">
+                                    <input type="radio" name="q8" value="a">
+                                    <span class="alt-marker">A</span>
+                                    <span class="alt-text">James Bond</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q8" value="b">
+                                    <span class="alt-marker">B</span>
+                                    <span class="alt-text">Jason Bourne</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q8" value="c">
+                                    <span class="alt-marker">C</span>
+                                    <span class="alt-text">Ethan Hunt</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q8" value="d">
+                                    <span class="alt-marker">D</span>
+                                    <span class="alt-text">Jack Reacher</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card-nav">
+                            <a href="#q7" class="btn-prev">← Anterior</a>
+                            <a href="#q9" class="btn-next">Próxima →</a>
+                        </div>
+                    </div>
+
+                    <!-- ===== PERGUNTA 9 ===== -->
+                    <div class="quiz-card" id="q9">
+                        <div class="card-progress">Pergunta 9 de 15</div>
+                        <div class="card-image">
+                            <div class="image-placeholder placeholder-diehard">
+                                <span class="placeholder-text">🏢 Duro de Matar</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-question">Qual é o nome do protagonista de "Duro de Matar"?</h3>
+                            <div class="card-alternatives">
+                                <label class="alternative">
+                                    <input type="radio" name="q9" value="a">
+                                    <span class="alt-marker">A</span>
+                                    <span class="alt-text">Martin Riggs</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q9" value="b">
+                                    <span class="alt-marker">B</span>
+                                    <span class="alt-text">John McClane</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q9" value="c">
+                                    <span class="alt-marker">C</span>
+                                    <span class="alt-text">Dutch</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q9" value="d">
+                                    <span class="alt-marker">D</span>
+                                    <span class="alt-text">Harry Callahan</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card-nav">
+                            <a href="#q8" class="btn-prev">← Anterior</a>
+                            <a href="#q10" class="btn-next">Próxima →</a>
+                        </div>
+                    </div>
+
+                    <!-- ===== PERGUNTA 10 ===== -->
+                    <div class="quiz-card" id="q10">
+                        <div class="card-progress">Pergunta 10 de 15</div>
+                        <div class="card-image">
+                            <div class="image-placeholder placeholder-mad-max">
+                                <span class="placeholder-text">🔥 Mad Max</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-question">Qual atriz interpreta Furiosa em "Mad Max: Estrada da Fúria"?</h3>
+                            <div class="card-alternatives">
+                                <label class="alternative">
+                                    <input type="radio" name="q10" value="a">
+                                    <span class="alt-marker">A</span>
+                                    <span class="alt-text">Scarlett Johansson</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q10" value="b">
+                                    <span class="alt-marker">B</span>
+                                    <span class="alt-text">Charlize Theron</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q10" value="c">
+                                    <span class="alt-marker">C</span>
+                                    <span class="alt-text">Gal Gadot</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q10" value="d">
+                                    <span class="alt-marker">D</span>
+                                    <span class="alt-text">Brie Larson</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card-nav">
+                            <a href="#q9" class="btn-prev">← Anterior</a>
+                            <a href="#q11" class="btn-next">Próxima →</a>
+                        </div>
+                    </div>
+
+                    <!-- ===== PERGUNTA 11 ===== -->
+                    <div class="quiz-card" id="q11">
+                        <div class="card-progress">Pergunta 11 de 15</div>
+                        <div class="card-image">
+                            <div class="image-placeholder placeholder-thor">
+                                <span class="placeholder-text">⚡ Thor</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-question">Qual é o nome do martelo de Thor?</h3>
+                            <div class="card-alternatives">
+                                <label class="alternative">
+                                    <input type="radio" name="q11" value="a">
+                                    <span class="alt-marker">A</span>
+                                    <span class="alt-text">Stormbreaker</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q11" value="b">
+                                    <span class="alt-marker">B</span>
+                                    <span class="alt-text">Excalibur</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q11" value="c">
+                                    <span class="alt-marker">C</span>
+                                    <span class="alt-text">Mjolnir</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q11" value="d">
+                                    <span class="alt-marker">D</span>
+                                    <span class="alt-text">Gungnir</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card-nav">
+                            <a href="#q10" class="btn-prev">← Anterior</a>
+                            <a href="#q12" class="btn-next">Próxima →</a>
+                        </div>
+                    </div>
+
+                    <!-- ===== PERGUNTA 12 ===== -->
+                    <div class="quiz-card" id="q12">
+                        <div class="card-progress">Pergunta 12 de 15</div>
+                        <div class="card-image">
+                            <div class="image-placeholder placeholder-terminator">
+                                <span class="placeholder-text">🤖 O Exterminador</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-question">Qual a famosa frase do Exterminador do Futuro?</h3>
+                            <div class="card-alternatives">
+                                <label class="alternative">
+                                    <input type="radio" name="q12" value="a">
+                                    <span class="alt-marker">A</span>
+                                    <span class="alt-text">"I'll be back"</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q12" value="b">
+                                    <span class="alt-marker">B</span>
+                                    <span class="alt-text">"Hasta la vista, baby"</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q12" value="c">
+                                    <span class="alt-marker">C</span>
+                                    <span class="alt-text">"May the force be with you"</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q12" value="d">
+                                    <span class="alt-marker">D</span>
+                                    <span class="alt-text">"Here's Johnny!"</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card-nav">
+                            <a href="#q11" class="btn-prev">← Anterior</a>
+                            <a href="#q13" class="btn-next">Próxima →</a>
+                        </div>
+                    </div>
+
+                    <!-- ===== PERGUNTA 13 ===== -->
+                    <div class="quiz-card" id="q13">
+                        <div class="card-progress">Pergunta 13 de 15</div>
+                        <div class="card-image">
+                            <div class="image-placeholder placeholder-pantera">
+                                <span class="placeholder-text">🐾 Pantera Negra</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-question">Qual é o nome do país fictício de "Pantera Negra"?</h3>
+                            <div class="card-alternatives">
+                                <label class="alternative">
+                                    <input type="radio" name="q13" value="a">
+                                    <span class="alt-marker">A</span>
+                                    <span class="alt-text">Wakanda</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q13" value="b">
+                                    <span class="alt-marker">B</span>
+                                    <span class="alt-text">Asgard</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q13" value="c">
+                                    <span class="alt-marker">C</span>
+                                    <span class="alt-text">Themyscira</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q13" value="d">
+                                    <span class="alt-marker">D</span>
+                                    <span class="alt-text">Latvéria</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card-nav">
+                            <a href="#q12" class="btn-prev">← Anterior</a>
+                            <a href="#q14" class="btn-next">Próxima →</a>
+                        </div>
+                    </div>
+
+                    <!-- ===== PERGUNTA 14 ===== -->
+                    <div class="quiz-card" id="q14">
+                        <div class="card-progress">Pergunta 14 de 15</div>
+                        <div class="card-image">
+                            <div class="image-placeholder placeholder-rocky">
+                                <span class="placeholder-text">🥊 Rocky</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-question">Quem interpreta Rocky Balboa?</h3>
+                            <div class="card-alternatives">
+                                <label class="alternative">
+                                    <input type="radio" name="q14" value="a">
+                                    <span class="alt-marker">A</span>
+                                    <span class="alt-text">Arnold Schwarzenegger</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q14" value="b">
+                                    <span class="alt-marker">B</span>
+                                    <span class="alt-text">Sylvester Stallone</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q14" value="c">
+                                    <span class="alt-marker">C</span>
+                                    <span class="alt-text">Bruce Willis</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q14" value="d">
+                                    <span class="alt-marker">D</span>
+                                    <span class="alt-text">Jean-Claude Van Damme</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card-nav">
+                            <a href="#q13" class="btn-prev">← Anterior</a>
+                            <a href="#q15" class="btn-next">Próxima →</a>
+                        </div>
+                    </div>
+
+                    <!-- ===== PERGUNTA 15 ===== -->
+                    <div class="quiz-card" id="q15">
+                        <div class="card-progress">Pergunta 15 de 15</div>
+                        <div class="card-image">
+                            <div class="image-placeholder placeholder-starwars">
+                                <span class="placeholder-text">⭐ Star Wars</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-question">Qual personagem diz "Eu sou seu pai" em Star Wars?</h3>
+                            <div class="card-alternatives">
+                                <label class="alternative">
+                                    <input type="radio" name="q15" value="a">
+                                    <span class="alt-marker">A</span>
+                                    <span class="alt-text">Yoda</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q15" value="b">
+                                    <span class="alt-marker">B</span>
+                                    <span class="alt-text">Obi-Wan Kenobi</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q15" value="c">
+                                    <span class="alt-marker">C</span>
+                                    <span class="alt-text">Darth Vader</span>
+                                </label>
+                                <label class="alternative">
+                                    <input type="radio" name="q15" value="d">
+                                    <span class="alt-marker">D</span>
+                                    <span class="alt-text">Han Solo</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card-nav">
+                            <a href="#q14" class="btn-prev">← Anterior</a>
+                            <a href="#resultado" class="btn-finish">Finalizar Quiz ✓</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ===== DOTS DE PROGRESSO ===== -->
+            <div class="quiz-dots">
+                <a href="#q1" class="dot" title="Pergunta 1"></a>
+                <a href="#q2" class="dot" title="Pergunta 2"></a>
+                <a href="#q3" class="dot" title="Pergunta 3"></a>
+                <a href="#q4" class="dot" title="Pergunta 4"></a>
+                <a href="#q5" class="dot" title="Pergunta 5"></a>
+                <a href="#q6" class="dot" title="Pergunta 6"></a>
+                <a href="#q7" class="dot" title="Pergunta 7"></a>
+                <a href="#q8" class="dot" title="Pergunta 8"></a>
+                <a href="#q9" class="dot" title="Pergunta 9"></a>
+                <a href="#q10" class="dot" title="Pergunta 10"></a>
+                <a href="#q11" class="dot" title="Pergunta 11"></a>
+                <a href="#q12" class="dot" title="Pergunta 12"></a>
+                <a href="#q13" class="dot" title="Pergunta 13"></a>
+                <a href="#q14" class="dot" title="Pergunta 14"></a>
+                <a href="#q15" class="dot" title="Pergunta 15"></a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ======================== RESULTADO / XP ======================== -->
+    <section class="quiz-result" id="resultado">
+        <div class="section-container">
+            <div class="result-card">
+                <div class="result-icon">🏆</div>
+                <h2 class="result-title">Quiz Finalizado!</h2>
+                <p class="result-description">Parabéns por completar o quiz de Ação!</p>
+                <div class="xp-result">
+                    <div class="xp-bar-container">
+                        <div class="xp-bar-fill"></div>
+                    </div>
+                    <div class="xp-earned">
+                        <span class="xp-icon">⭐</span>
+                        <span class="xp-amount">+150 XP</span>
+                    </div>
+                </div>
+                <div class="result-stats">
+                    <div class="stat">
+                        <span class="stat-number">15</span>
+                        <span class="stat-label">Perguntas</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10 XP</span>
+                        <span class="stat-label">Por acerto</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">15</span>
+                        <span class="stat-label">Diárias</span>
+                    </div>
+                </div>
+                <a href="#generos-quiz" class="btn-replay">Jogar Novamente</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== FOOTER ======================== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <span class="logo-cine">Cine</span><span class="logo-planner">Planner</span>
+            </div>
+            <p class="footer-text">© 2026 CinePlanner — Grupo Vermelho. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

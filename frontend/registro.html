@@ -8,6 +8,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- ======================== CARROSSEL DE FUNDO (CSS ONLY) ======================== -->
+    <div class="carousel-bg">
+        <img src="img/filme1.jpg" class="carousel-slide slide-1" alt="Filme 1">
+        <img src="img/filme2.jpg" class="carousel-slide slide-2" alt="Filme 2">
+        <img src="img/filme3.jpg" class="carousel-slide slide-3" alt="Filme 3">
+        <img src="img/filme4.jpg" class="carousel-slide slide-4" alt="Filme 4">
+        <img src="img/filme5.jpg" class="carousel-slide slide-5" alt="Filme 5">
+    </div>
+
+    <!-- ======================== OVERLAY ESCURO ======================== -->
+    <div class="carousel-overlay"></div>
+
+    <!-- ======================== FORMULÁRIO DE REGISTRO ======================== -->
     <div class="register-container">
         <!-- Ícone de cinema vermelho -->
         <div class="icon-container">
@@ -56,10 +70,6 @@
                     <path d="M8 11V7C8 4.79 9.79 3 12 3C14.21 3 16 4.79 16 7V11" stroke="#888" stroke-width="2" fill="none"/>
                 </svg>
                 <input type="password" id="password" placeholder="Senha" required>
-                <svg class="toggle-password" onclick="togglePassword('password', this)" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 12C1 12 5 5 12 5C19 5 23 12 23 12C23 12 19 19 12 19C5 19 1 12 1 12Z" stroke="#888" stroke-width="2" fill="none"/>
-                    <circle cx="12" cy="12" r="3" stroke="#888" stroke-width="2" fill="none"/>
-                </svg>
             </div>
 
             <div class="input-group">
@@ -68,10 +78,6 @@
                     <path d="M8 11V7C8 4.79 9.79 3 12 3C14.21 3 16 4.79 16 7V11" stroke="#888" stroke-width="2" fill="none"/>
                 </svg>
                 <input type="password" id="confirmPassword" placeholder="Confirmar senha" required>
-                <svg class="toggle-password" onclick="togglePassword('confirmPassword', this)" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 12C1 12 5 5 12 5C19 5 23 12 23 12C23 12 19 19 12 19C5 19 1 12 1 12Z" stroke="#888" stroke-width="2" fill="none"/>
-                    <circle cx="12" cy="12" r="3" stroke="#888" stroke-width="2" fill="none"/>
-                </svg>
             </div>
 
             <button type="submit">Cadastrar</button>
@@ -80,24 +86,6 @@
         <p class="divider">ou</p>
         <p class="login-link">Já tem uma conta? <a href="login.html">Entrar</a></p>
     </div>
-    
-    <script>
-        document.getElementById('registerForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // Evita o recarregamento da página e envio do form
-            // Lógica de registro pode ser adicionada aqui posteriormente
-            console.log('Formulário enviado com sucesso!');
-        });
 
-        function togglePassword(inputId, icon) {
-            const input = document.getElementById(inputId);
-            if (input.type === 'password') {
-                input.type = 'text';
-                icon.style.opacity = '1';
-            } else {
-                input.type = 'password';
-                icon.style.opacity = '0.6';
-            }
-        }
-    </script>
 </body>
 </html>

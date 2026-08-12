@@ -10,7 +10,9 @@ Não use e nem instale nada neste projeto
 
 Este projeto **NÃO USA** javascript.
 
-- Faça uma navbar igual para todas as páginas criadas do projeto, use a refêrencia da pasta `referencia` como base.
+- Faça uma **NAVBAR** igual para todas as páginas criadas do projeto (com excessão à tela de login e de cadastro), use o arquivo `index.html`para fazer igual em todas..
+    - Imagem da logo "CinePlanner" em vermelho 
+
 
 ## Referências
 - Veja a referência na pasta `referencias`.
@@ -19,6 +21,11 @@ Este projeto **NÃO USA** javascript.
 - No lugar das imagens use placeholders.
 - Todas as seções devem ser separadas por comentários.
 - O HTML e o CSS devem ser em arquivos separados dentro da pasta `frontend` e os arquivos css dentro da pasta `css` que está dentro da pasta `frontend`
+
+## Cores
+- Use vermelho para as destaque
+- Use preto para padrão e para o navbar
+- Use cinza claro para o fundo sem imagem
 
 ## Páginas
 - index.html -> Contendo a tela inicial com o cabeçalho com uma imagem de fundo e uma frase qualquer, em seguida uma seção de filmes com maior nota, na seção de filmes com 4 cards por linha, depois que o cabeçalho acabar, deverá aparecer uma navbar com as opções para a escolha de **Gênero**, **Mais popular**, **Lançamentos** e  **Em cartaz**. Nos cards de cada filme na parte inferior deverá ter o nome do filme, o gênero do filme e a nota do filme.

@@ -10,7 +10,7 @@ Não use e nem instale nada neste projeto
 
 Este projeto **NÃO USA** javascript.
 
-- Faça uma **NAVBAR** igual para todas as páginas criadas do projeto (com excessão à tela de login e de cadastro), use a refêrencia da pasta `referencia` como base.
+- Faça uma **NAVBAR** igual para todas as páginas criadas do projeto (com excessão à tela de login e de cadastro), use o arquivo `index.html`para fazer igual em todas..
     - Imagem da logo "CinePlanner" em vermelho 
 
 

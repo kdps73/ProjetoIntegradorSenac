@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
-    <link rel="stylesheet" href="css/registro.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="register-container">
+    <div class="login-container">
         <!-- Ícone de cinema vermelho -->
         <div class="icon-container">
             <svg class="cinema-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,18 +30,10 @@
             </svg>
         </div>
 
-        <h2>Criar conta</h2>
-        <p class="subtitle">Preencha os campos para se registrar</p>
+        <h2>Entrar</h2>
+        <p class="subtitle">Faça login para acessar sua conta</p>
 
-        <form id="registerForm">
-            <div class="input-group">
-                <svg class="input-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="8" r="4" stroke="#888" stroke-width="2" fill="none"/>
-                    <path d="M5 20C5 16.686 8.134 14 12 14C15.866 14 19 16.686 19 20" stroke="#888" stroke-width="2" fill="none"/>
-                </svg>
-                <input type="text" id="username" placeholder="Nome de usuário" required>
-            </div>
-
+        <form id="loginForm">
             <div class="input-group">
                 <svg class="input-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="2" y="5" width="20" height="14" rx="2" stroke="#888" stroke-width="2" fill="none"/>
@@ -62,30 +54,17 @@
                 </svg>
             </div>
 
-            <div class="input-group">
-                <svg class="input-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="5" y="11" width="14" height="10" rx="2" stroke="#888" stroke-width="2" fill="none"/>
-                    <path d="M8 11V7C8 4.79 9.79 3 12 3C14.21 3 16 4.79 16 7V11" stroke="#888" stroke-width="2" fill="none"/>
-                </svg>
-                <input type="password" id="confirmPassword" placeholder="Confirmar senha" required>
-                <svg class="toggle-password" onclick="togglePassword('confirmPassword', this)" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 12C1 12 5 5 12 5C19 5 23 12 23 12C23 12 19 19 12 19C5 19 1 12 1 12Z" stroke="#888" stroke-width="2" fill="none"/>
-                    <circle cx="12" cy="12" r="3" stroke="#888" stroke-width="2" fill="none"/>
-                </svg>
-            </div>
-
-            <button type="submit">Cadastrar</button>
+            <button type="submit">Entrar</button>
         </form>
 
         <p class="divider">ou</p>
-        <p class="login-link">Já tem uma conta? <a href="login.html">Entrar</a></p>
+        <p class="register-link">Não tem uma conta? <a href="registro.html">Cadastrar</a></p>
     </div>
     
     <script>
-        document.getElementById('registerForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // Evita o recarregamento da página e envio do form
-            // Lógica de registro pode ser adicionada aqui posteriormente
-            console.log('Formulário enviado com sucesso!');
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            console.log('Login realizado com sucesso!');
         });
 
         function togglePassword(inputId, icon) {

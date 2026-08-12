@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CINEPLANNER - Perfil do Usuário</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="usuario.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="header">
+
+        <div class="navbar">
+
+            <a href="#" class="logo">
+                CINEPLANNER
+            </a>
+
+            <nav class="nav-menu">
+
+                <a href="#" class="active">
+                    INÍCIO
+                </a>
+
+                <a href="#">
+                    FILMES
+                </a>
+
+                <a href="#">
+                    LISTAS
+                </a>
+
+                <a href="#">
+                    MARATONAS
+                </a>
+
+            </nav>
+
+            <div class="nav-right">
+
+                <!-- Pesquisa -->
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        placeholder="Buscar..."
+                    >
+
+                    <img
+                        src="./img/lupa.webp"
+                        alt="Buscar"
+                        class="search-icon"
+                    >
+
+                </div>
+
+                <!-- Perfil -->
+                <div class="profile-icon">
+
+                    <img
+                        src="https://adaptcommunitynetwork.org/wp-content/uploads/2023/09/person-placeholder.jpg"
+                        alt="Perfil"
+                        class="profile-avatar-icon"
+                    >
+
+                </div>
+
+                <!-- Botão entrar -->
+                <a href="#" class="login-button">
+                    ENTRAR
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= CONTEÚDO ================= -->
+
+    <main class="container">
+
+        <!-- Barra de XP -->
+
+        <section class="xp-section">
+
+            <div class="xp-header">
+                <span>PROGRESSO</span>
+                <strong>LEVEL 50</strong>
+            </div>
+
+            <div class="xp-bar-container">
+
+                <div class="xp-fill"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Perfil -->
+
+        <section class="profile-card">
+
+            <div class="avatar-container">
+
+                <img
+                    class="hat-accessory"
+                    src="./img/hat-red-dead.png"
+                    alt="Chapéu"
+                >
+
+                <div class="avatar-circle">
+
+                    <img
+                        src="https://adaptcommunitynetwork.org/wp-content/uploads/2023/09/person-placeholder.jpg"
+                        alt="Avatar do Usuário"
+                        class="avatar-img"
+                    >
+
+                </div>
+
+                <img
+                    class="accessory"
+                    src="./img/acessorio-red-dead.png"
+                    alt="Espada"
+                >
+
+            </div>
+
+
+            <div class="user-info">
+
+                <span class="username-label">
+                    USUÁRIO
+                </span>
+
+                <h1 class="username">
+                    THEY_PRO_FILMES
+                </h1>
+
+                <div class="bio-box">
+
+                    <input
+                        type="text"
+                        class="bio-text"
+                        placeholder="Escreva sua bio aqui..."
+                    >
+
+                </div>
+
+            </div>
+
+
+            <img
+                class="pet-accessory"
+                src="./img/pet-red-dead.png"
+                alt="Mascote"
+            >
+
+        </section>
+
+
+        <!-- Divisor -->
+
+        <div class="divider"></div>
+
+
+        <!-- ================= FAVORITOS ================= -->
+
+        <section class="movies-section">
+
+            <div class="section-header">
+
+                <h2>
+                    FILMES FAVORITOS
+                </h2>
+
+                <span>
+                    05 FILMES
+                </span>
+
+            </div>
+
+
+            <div class="movies-grid">
+
+                <article class="movie-card">
+
+                    <img
+                        src="https://placehold.co/300x450"
+                        alt="Capa do filme"
+                        class="movie-poster"
+                    >
+
+                    <span class="movie-title">
+                        Nome do Filme
+                    </span>
+
+                </article>
+
+
+                <article class="movie-card">
+
+                    <img
+                        src="https://placehold.co/300x450"
+                        alt="Capa do filme"
+                        class="movie-poster"
+                    >
+
+                    <span class="movie-title">
+                        Nome do Filme
+                    </span>
+
+                </article>
+
+
+                <article class="movie-card">
+
+                    <img
+                        src="https://placehold.co/300x450"
+                        alt="Capa do filme"
+                        class="movie-poster"
+                    >
+
+                    <span class="movie-title">
+                        Nome do Filme
+                    </span>
+
+                </article>
+
+
+                <article class="movie-card">
+
+                    <img
+                        src="https://placehold.co/300x450"
+                        alt="Capa do filme"
+                        class="movie-poster"
+                    >
+
+                    <span class="movie-title">
+                        Nome do Filme
+                    </span>
+
+                </article>
+
+
+                <article class="movie-card">
+
+                    <img
+                        src="https://placehold.co/300x450"
+                        alt="Capa do filme"
+                        class="movie-poster"
+                    >
+
+                    <span class="movie-title">
+                        Nome do Filme
+                    </span>
+
+                </article>
+
+                <button href="#" class="login-button">
+                    VER MAIS
+                </button>
+            </div>
+
+        </section>
+
+
+        <!-- ================= ASSISTIR MAIS TARDE ================= -->
+
+        <section class="movies-section">
+
+            <div class="section-header">
+
+                <h2>
+                    ASSISTIR MAIS TARDE
+                </h2>
+
+                <span>
+                    05 FILMES
+                </span>
+
+            </div>
+
+
+            <div class="movies-grid">
+
+                <article class="movie-card">
+
+                    <img
+                        src="https://placehold.co/300x450"
+                        alt="Capa do filme"
+                        class="movie-poster"
+                    >
+
+                    <span class="movie-title">
+                        Nome do Filme
+                    </span>
+
+                </article>
+
+
+                <article class="movie-card">
+
+                    <img
+                        src="https://placehold.co/300x450"
+                        alt="Capa do filme"
+                        class="movie-poster"
+                    >
+
+                    <span class="movie-title">
+                        Nome do Filme
+                    </span>
+
+                </article>
+
+
+                <article class="movie-card">
+
+                    <img
+                        src="https://placehold.co/300x450"
+                        alt="Capa do filme"
+                        class="movie-poster"
+                    >
+
+                    <span class="movie-title">
+                        Nome do Filme
+                    </span>
+
+                </article>
+
+
+                <article class="movie-card">
+
+                    <img
+                        src="https://placehold.co/300x450"
+                        alt="Capa do filme"
+                        class="movie-poster"
+                    >
+
+                    <span class="movie-title">
+                        Nome do Filme
+                    </span>
+
+                </article>
+
+
+                <article class="movie-card">
+
+                    <img
+                        src="https://placehold.co/300x450"
+                        alt="Capa do filme"
+                        class="movie-poster"
+                    >
+
+                    <span class="movie-title">
+                        Nome do Filme
+                    </span>
+
+                </article>
+
+                <button href="#" class="login-button">
+                    VER MAIS
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <span class="footer-logo">
+                CINEPLANNER
+            </span>
+
+            <p class="footer-copy">
+                © 2026 CINEPLANNER – Grupo Vermelho · Senac
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

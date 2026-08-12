@@ -33,7 +33,7 @@ body::before {
     z-index: 0;
 }
 
-.register-container {
+.login-container {
     position: relative;
     z-index: 1;
     background-color: rgba(15, 15, 15, 0.95);
@@ -172,26 +172,26 @@ button:active {
     margin-bottom: 10px;
 }
 
-.login-link {
+.register-link {
     color: #999999;
     font-size: 14px;
 }
 
-.login-link a {
+.register-link a {
     color: #e50914;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.2s ease;
 }
 
-.login-link a:hover {
+.register-link a:hover {
     color: #ff3b44;
     text-decoration: underline;
 }
 
 /* Responsividade */
 @media (max-width: 520px) {
-    .register-container {
+    .login-container {
         margin: 20px;
         padding: 40px 30px 30px;
     }

@@ -27,6 +27,7 @@ Este projeto **NÃO USA** javascript.
 - Use vermelho para as destaque
 - Use preto para padrão e para o navbar
 - Use cinza claro para o fundo sem imagem
+- Use **SEMPRE** as mesmas cores para todas as páginas, utilize o `index.html` como refêrencia.
 
 ## Páginas
 - index.html -> Contendo a tela inicial com o cabeçalho com uma imagem de fundo e uma frase qualquer, em seguida uma seção de filmes com maior nota, na seção de filmes com 4 cards por linha, depois que o cabeçalho acabar, deverá aparecer uma navbar com as opções para a escolha de **Gênero**, **Mais popular**, **Lançamentos** e  **Em cartaz**. Nos cards de cada filme na parte inferior deverá ter o nome do filme, o gênero do filme e a nota do filme.

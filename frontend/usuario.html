@@ -4,77 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>CINEPLANNER - Perfil do Usuário</title>
+    <meta name="description"
+        content="CiNEPLANNER – Perfil do Usuário. Veja seu progresso, nível, filmes favoritos e listas.">
+    <title>CiNEPLANNER – Perfil do Usuário</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
 
-    <link rel="stylesheet" href="usuario.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/usuario.css">
 </head>
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
-
-    <header class="header">
-
-        <div class="navbar">
-
-            <a href="#" class="logo">
-                CINEPLANNER
+    <!-- ===== NAVBAR GLOBAL ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo" id="logo-link">
+                <span class="logo-text">CiNEPLANNER</span>
             </a>
-
-            <nav class="nav-menu">
-
-                <a href="#" class="active">
-                    INÍCIO
-                </a>
-
-                <a href="#">
-                    FILMES
-                </a>
-
-                <a href="#">
-                    LISTAS
-                </a>
-
-                <a href="#">
-                    MARATONAS
-                </a>
-
-            </nav>
-
-            <div class="nav-right">
-
-                <!-- Pesquisa -->
-                <div class="search-box">
-
-                    <input type="text" placeholder="Buscar...">
-
-                    <img src="./img/lupa.webp" alt="Buscar" class="search-icon">
-
-                </div>
-
-                <!-- Perfil -->
-                <div class="profile-icon">
-
-                    <img src="https://adaptcommunitynetwork.org/wp-content/uploads/2023/09/person-placeholder.jpg"
-                        alt="Perfil" class="profile-avatar-icon">
-
-                </div>
-
-                <!-- Botão entrar -->
-                <a href="#" class="login-button">
-                    ENTRAR
-                </a>
-
+            <ul class="navbar-links">
+                <li><a href="index.html" class="nav-link active">Início</a></li>
+                <li><a href="#" class="nav-link">Filmes</a></li>
+                <li><a href="#" class="nav-link">Listas</a></li>
+                <li><a href="#" class="nav-link">Quiz</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <a href="registro.html" class="btn-login" id="btn-entrar">Entrar</a>
             </div>
-
         </div>
-
-    </header>
+    </nav>
 
 
     <!-- ================= CONTEÚDO ================= -->
@@ -167,67 +129,107 @@
 
             <div class="movies-grid">
 
-                <article class="movie-card">
-                    <div class="movie-poster-container">
-                        <img src="https://placehold.co/300x450" alt="Capa do filme" class="movie-poster">
-                        <div class="movie-overlay">
-                            <span class="movie-overlay-text">Ver Detalhes</span>
+                <article class="filme-card">
+                    <a href="resenha.html" class="card-link">
+                        <div class="card-poster">
+                            <img src="https://placehold.co/300x450/1a1a1a/e50914?text=Filme+1" alt="Poster do Filme 1"
+                                class="poster-img">
+                            <div class="card-overlay">
+                                <span class="card-overlay-text">Ver Detalhes</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="movie-info">
-                        <span class="movie-title">Nome do Filme</span>
-                    </div>
+                        <div class="card-info">
+                            <h3 class="card-titulo">O Último Horizonte</h3>
+                            <span class="card-genero">Ficção Científica</span>
+                            <div class="card-nota">
+                                <span class="estrela">★</span>
+                                <span class="nota-valor">9.8</span>
+                            </div>
+                        </div>
+                    </a>
                 </article>
 
-                <article class="movie-card">
-                    <div class="movie-poster-container">
-                        <img src="https://placehold.co/300x450" alt="Capa do filme" class="movie-poster">
-                        <div class="movie-overlay">
-                            <span class="movie-overlay-text">Ver Detalhes</span>
+                <article class="filme-card">
+                    <a href="resenha.html" class="card-link">
+                        <div class="card-poster">
+                            <img src="https://placehold.co/300x450/1a1a1a/e50914?text=Filme+2" alt="Poster do Filme 2"
+                                class="poster-img">
+                            <div class="card-overlay">
+                                <span class="card-overlay-text">Ver Detalhes</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="movie-info">
-                        <span class="movie-title">Nome do Filme</span>
-                    </div>
+                        <div class="card-info">
+                            <h3 class="card-titulo">Sombras do Passado</h3>
+                            <span class="card-genero">Drama</span>
+                            <div class="card-nota">
+                                <span class="estrela">★</span>
+                                <span class="nota-valor">9.5</span>
+                            </div>
+                        </div>
+                    </a>
                 </article>
 
-                <article class="movie-card">
-                    <div class="movie-poster-container">
-                        <img src="https://placehold.co/300x450" alt="Capa do filme" class="movie-poster">
-                        <div class="movie-overlay">
-                            <span class="movie-overlay-text">Ver Detalhes</span>
+                <article class="filme-card">
+                    <a href="resenha.html" class="card-link">
+                        <div class="card-poster">
+                            <img src="https://placehold.co/300x450/1a1a1a/e50914?text=Filme+3" alt="Poster do Filme 3"
+                                class="poster-img">
+                            <div class="card-overlay">
+                                <span class="card-overlay-text">Ver Detalhes</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="movie-info">
-                        <span class="movie-title">Nome do Filme</span>
-                    </div>
+                        <div class="card-info">
+                            <h3 class="card-titulo">Era Uma Vez no Caos</h3>
+                            <span class="card-genero">Ação</span>
+                            <div class="card-nota">
+                                <span class="estrela">★</span>
+                                <span class="nota-valor">9.3</span>
+                            </div>
+                        </div>
+                    </a>
                 </article>
 
-                <article class="movie-card">
-                    <div class="movie-poster-container">
-                        <img src="https://placehold.co/300x450" alt="Capa do filme" class="movie-poster">
-                        <div class="movie-overlay">
-                            <span class="movie-overlay-text">Ver Detalhes</span>
+                <article class="filme-card">
+                    <a href="resenha.html" class="card-link">
+                        <div class="card-poster">
+                            <img src="https://placehold.co/300x450/1a1a1a/e50914?text=Filme+4" alt="Poster do Filme 4"
+                                class="poster-img">
+                            <div class="card-overlay">
+                                <span class="card-overlay-text">Ver Detalhes</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="movie-info">
-                        <span class="movie-title">Nome do Filme</span>
-                    </div>
+                        <div class="card-info">
+                            <h3 class="card-titulo">A Queda dos Deuses</h3>
+                            <span class="card-genero">Suspense</span>
+                            <div class="card-nota">
+                                <span class="estrela">★</span>
+                                <span class="nota-valor">9.1</span>
+                            </div>
+                        </div>
+                    </a>
                 </article>
 
-                <article class="movie-card">
-                    <div class="movie-poster-container">
-                        <img src="https://placehold.co/300x450" alt="Capa do filme" class="movie-poster">
-                        <div class="movie-overlay">
-                            <span class="movie-overlay-text">Ver Detalhes</span>
+                <article class="filme-card">
+                    <a href="resenha.html" class="card-link">
+                        <div class="card-poster">
+                            <img src="https://placehold.co/300x450/1a1a1a/e50914?text=Filme+5" alt="Poster do Filme 5"
+                                class="poster-img">
+                            <div class="card-overlay">
+                                <span class="card-overlay-text">Ver Detalhes</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="movie-info">
-                        <span class="movie-title">Nome do Filme</span>
-                    </div>
+                        <div class="card-info">
+                            <h3 class="card-titulo">Nebulosa</h3>
+                            <span class="card-genero">Aventura</span>
+                            <div class="card-nota">
+                                <span class="estrela">★</span>
+                                <span class="nota-valor">8.9</span>
+                            </div>
+                        </div>
+                    </a>
                 </article>
 
-                <button href="#" class="login-button">
+                <button class="btn-ver-mais">
                     VER MAIS
                 </button>
             </div>
@@ -254,67 +256,107 @@
 
             <div class="movies-grid">
 
-                <article class="movie-card">
-                    <div class="movie-poster-container">
-                        <img src="https://placehold.co/300x450" alt="Capa do filme" class="movie-poster">
-                        <div class="movie-overlay">
-                            <span class="movie-overlay-text">Ver Detalhes</span>
+                <article class="filme-card">
+                    <a href="resenha.html" class="card-link">
+                        <div class="card-poster">
+                            <img src="https://placehold.co/300x450/1a1a1a/e50914?text=Filme+6" alt="Poster do Filme 6"
+                                class="poster-img">
+                            <div class="card-overlay">
+                                <span class="card-overlay-text">Ver Detalhes</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="movie-info">
-                        <span class="movie-title">Nome do Filme</span>
-                    </div>
+                        <div class="card-info">
+                            <h3 class="card-titulo">Amor em Câmera Lenta</h3>
+                            <span class="card-genero">Romance</span>
+                            <div class="card-nota">
+                                <span class="estrela">★</span>
+                                <span class="nota-valor">8.7</span>
+                            </div>
+                        </div>
+                    </a>
                 </article>
 
-                <article class="movie-card">
-                    <div class="movie-poster-container">
-                        <img src="https://placehold.co/300x450" alt="Capa do filme" class="movie-poster">
-                        <div class="movie-overlay">
-                            <span class="movie-overlay-text">Ver Detalhes</span>
+                <article class="filme-card">
+                    <a href="resenha.html" class="card-link">
+                        <div class="card-poster">
+                            <img src="https://placehold.co/300x450/1a1a1a/e50914?text=Filme+7" alt="Poster do Filme 7"
+                                class="poster-img">
+                            <div class="card-overlay">
+                                <span class="card-overlay-text">Ver Detalhes</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="movie-info">
-                        <span class="movie-title">Nome do Filme</span>
-                    </div>
+                        <div class="card-info">
+                            <h3 class="card-titulo">Risadas no Fim do Mundo</h3>
+                            <span class="card-genero">Comédia</span>
+                            <div class="card-nota">
+                                <span class="estrela">★</span>
+                                <span class="nota-valor">8.5</span>
+                            </div>
+                        </div>
+                    </a>
                 </article>
 
-                <article class="movie-card">
-                    <div class="movie-poster-container">
-                        <img src="https://placehold.co/300x450" alt="Capa do filme" class="movie-poster">
-                        <div class="movie-overlay">
-                            <span class="movie-overlay-text">Ver Detalhes</span>
+                <article class="filme-card">
+                    <a href="resenha.html" class="card-link">
+                        <div class="card-poster">
+                            <img src="https://placehold.co/300x450/1a1a1a/e50914?text=Filme+8" alt="Poster do Filme 8"
+                                class="poster-img">
+                            <div class="card-overlay">
+                                <span class="card-overlay-text">Ver Detalhes</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="movie-info">
-                        <span class="movie-title">Nome do Filme</span>
-                    </div>
+                        <div class="card-info">
+                            <h3 class="card-titulo">Gritos na Escuridão</h3>
+                            <span class="card-genero">Horror</span>
+                            <div class="card-nota">
+                                <span class="estrela">★</span>
+                                <span class="nota-valor">8.2</span>
+                            </div>
+                        </div>
+                    </a>
                 </article>
 
-                <article class="movie-card">
-                    <div class="movie-poster-container">
-                        <img src="https://placehold.co/300x450" alt="Capa do filme" class="movie-poster">
-                        <div class="movie-overlay">
-                            <span class="movie-overlay-text">Ver Detalhes</span>
+                <article class="filme-card">
+                    <a href="resenha.html" class="card-link">
+                        <div class="card-poster">
+                            <img src="https://placehold.co/300x450/1a1a1a/e50914?text=Filme+9" alt="Poster do Filme 9"
+                                class="poster-img">
+                            <div class="card-overlay">
+                                <span class="card-overlay-text">Ver Detalhes</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="movie-info">
-                        <span class="movie-title">Nome do Filme</span>
-                    </div>
+                        <div class="card-info">
+                            <h3 class="card-titulo">Mundo Paralelo</h3>
+                            <span class="card-genero">Animação</span>
+                            <div class="card-nota">
+                                <span class="estrela">★</span>
+                                <span class="nota-valor">8.0</span>
+                            </div>
+                        </div>
+                    </a>
                 </article>
 
-                <article class="movie-card">
-                    <div class="movie-poster-container">
-                        <img src="https://placehold.co/300x450" alt="Capa do filme" class="movie-poster">
-                        <div class="movie-overlay">
-                            <span class="movie-overlay-text">Ver Detalhes</span>
+                <article class="filme-card">
+                    <a href="resenha.html" class="card-link">
+                        <div class="card-poster">
+                            <img src="https://placehold.co/300x450/1a1a1a/e50914?text=Filme+10" alt="Poster do Filme 10"
+                                class="poster-img">
+                            <div class="card-overlay">
+                                <span class="card-overlay-text">Ver Detalhes</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="movie-info">
-                        <span class="movie-title">Nome do Filme</span>
-                    </div>
+                        <div class="card-info">
+                            <h3 class="card-titulo">O Preço da Glória</h3>
+                            <span class="card-genero">Drama</span>
+                            <div class="card-nota">
+                                <span class="estrela">★</span>
+                                <span class="nota-valor">7.8</span>
+                            </div>
+                        </div>
+                    </a>
                 </article>
 
-                <button href="#" class="login-button">
+                <button class="btn-ver-mais">
                     VER MAIS
                 </button>
 
@@ -325,22 +367,12 @@
     </main>
 
 
-    <!-- ================= FOOTER ================= -->
-
-    <footer class="footer">
-
+    <!-- ===== RODAPÉ ===== -->
+    <footer class="footer" id="footer">
         <div class="footer-container">
-
-            <span class="footer-logo">
-                CINEPLANNER
-            </span>
-
-            <p class="footer-copy">
-                © 2026 CINEPLANNER – Grupo Vermelho · Senac
-            </p>
-
+            <span class="footer-logo">CiNEPLANNER</span>
+            <p class="footer-copy">&copy; 2026 CiNEPLANNER – Grupo Vermelho · Senac</p>
         </div>
-
     </footer>
 
 </body>

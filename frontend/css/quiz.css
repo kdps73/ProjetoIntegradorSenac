@@ -447,6 +447,8 @@ ul {
 .btn-next, .btn-finish {
     background: var(--vermelho);
     color: var(--branco);
+    padding: 12px 24px;
+    border-radius: 23px;
 }
 
 .btn-next:hover, .btn-finish:hover {

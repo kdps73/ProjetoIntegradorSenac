@@ -30,7 +30,7 @@ html {
 }
 
 body {
-    background-color: var(--cinza-fundo);
+    background-color: var(--preto-suave);
     font-family: var(--fonte-corpo);
     color: var(--branco);
     overflow-x: hidden;
@@ -250,7 +250,7 @@ ul {
 
 /* ===== SEÇÃO DE FILMES ===== */
 .filmes-section {
-    background-color: #636363;
+    background-color: #141414;
     padding-bottom: 4rem;
 }
 
@@ -368,7 +368,7 @@ ul {
     font-family: var(--fonte-titulo);
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--preto);
+    color: var(--cinza-claro);
 }
 
 .section-subtitle {
